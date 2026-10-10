@@ -1,0 +1,9 @@
+{
+  "name": "ember-parity",
+  "private": true,
+  "description": "Test-only: runs the same scenario on Google's Firebase JS SDK, to compare with Ember's.",
+  "type": "module",
+  "dependencies": {
+    "firebase": "12.3.0"
+  }
+}
