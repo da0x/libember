@@ -18,7 +18,7 @@ CMake or protoc. A machine with g++ and a TLS library builds it.
 Ember is not affiliated with or endorsed by Google. Firebase and Cloud Firestore are
 trademarks of Google LLC.
 
-Version 0.1.0 (`EMBER_VERSION`).
+Version 0.1.1 (`EMBER_VERSION`).
 
 ## Building
 
@@ -107,8 +107,9 @@ As Google's own clients behave:
 
 ## REST
 
-`ember::https_post(url, headers, body)` and `ember::https_get(url, headers)` make an
-HTTP/1.1 call over the same TLS (or plain, for `http://`). Every status comes back in
+`ember::https_post(url, headers, body)`, `ember::https_put(url, headers, body)` and
+`ember::https_get(url, headers)` make an HTTP/1.1 call over the same TLS (or plain, for
+`http://`). Every status comes back in
 `response{status, body}`; only a connection that fails throws.
 
 ## Emulators

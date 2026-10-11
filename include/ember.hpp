@@ -79,7 +79,7 @@
 
 namespace ember {
 
-#define EMBER_VERSION "0.1.0"
+#define EMBER_VERSION "0.1.1"
 
     // Anything that went wrong: a connection, the protocol, or the server saying no.
     // status is the HTTP status when a REST call was refused, and 0 otherwise.
@@ -1727,6 +1727,11 @@ namespace ember {
 
     inline response https_get(const std::string& url, const std::vector<std::pair<std::string, std::string>>& headers) {
         return detail::http_exchange("GET", url, headers, nullptr);
+    }
+
+    // An HTTP PUT, like an upload to an address Cloud Storage signed.
+    inline response https_put(const std::string& url, const std::vector<std::pair<std::string, std::string>>& headers, const std::string& body) {
+        return detail::http_exchange("PUT", url, headers, &body);
     }
 
     // ---------------------------------------------------------------------------

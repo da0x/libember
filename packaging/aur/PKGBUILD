@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: Apache-2.0
 
 pkgname=libember
-pkgver=0.1.0
+pkgver=0.1.1
 pkgrel=1
 pkgdesc="An independent, modern C++ client for Firebase services, in one header"
 arch=('any')
